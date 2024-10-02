@@ -1,14 +1,20 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LobbyManager : MonoBehaviour,IPointerDownHandler
+public class LobbyManager : MonoBehaviour
 {
-    [Header("로비 플레이 버튼")]
-    public GameObject[] playBtns = new GameObject[3];
+    [Header("맵 선택창")] 
+    public GameObject SinglePannel;
     
-    [Header("로비 메뉴 버튼")]
-    public GameObject[] menuBtns = new GameObject[2];
+    [Header("멀티 플레이 팝업창")]
+    public GameObject multiPannel;
 
+    [Header("메뉴 팝업창")]
+    public GameObject menuPannel;
+    
+    [Header("랭킹 팝업창")]
+    public GameObject rankPannel;
+    
     // 다른 스크립트에서 사용하기 위해 싱글톤 생성
     private static LobbyManager instance = null;
     
@@ -31,10 +37,40 @@ public class LobbyManager : MonoBehaviour,IPointerDownHandler
     // 초기 설정 함수
     void Initialize()
     {
+        // 팝업창 비활성화
+        SinglePannel.SetActive(false);
+        multiPannel.SetActive(false);
+        menuPannel.SetActive(false);
+        rankPannel.SetActive(false);
     }
     
-    // 버튼 클릭 함수
-    public void OnPointerDown(PointerEventData eventData)
+    // 맵 선택 팝업 창 표시
+    public void ShowSinglePannel()
     {
+        SinglePannel.SetActive(!SinglePannel.activeSelf);
+    }
+
+    public void ShowMultiPannel()
+    {
+        multiPannel.SetActive(!multiPannel.activeSelf);
+    }
+
+    public void ShowRankPannel()
+    {
+        rankPannel.SetActive(!rankPannel.activeSelf);
+    }
+
+    public void ShowMenuPannel()
+    {
+        menuPannel.SetActive(!menuPannel.activeSelf);
+    }
+
+    public void Exit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }
