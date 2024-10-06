@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class LobbyManager : MonoBehaviour
 {
     [Header("맵 선택창")] 
-    public GameObject SinglePannel;
+    public GameObject singlePannel;
     
     [Header("멀티 플레이 팝업창")]
     public GameObject multiPannel;
@@ -15,8 +15,14 @@ public class LobbyManager : MonoBehaviour
     [Header("랭킹 팝업창")]
     public GameObject rankPannel;
     
+    [Header("게임 씬")]
+    public GameObject gameScene;
+    
+    [Header("로비 씬")]
+    public GameObject lobbyScene;
+    
     // 다른 스크립트에서 사용하기 위해 싱글톤 생성
-    private static LobbyManager instance = null;
+    public static LobbyManager instance = null;
     
     // 매니저 스크립트 인스턴스 생성 시 실행
     void Awake()
@@ -38,16 +44,18 @@ public class LobbyManager : MonoBehaviour
     void Initialize()
     {
         // 팝업창 비활성화
-        SinglePannel.SetActive(false);
+        singlePannel.SetActive(false);
         multiPannel.SetActive(false);
         menuPannel.SetActive(false);
         rankPannel.SetActive(false);
+        // 게임 씬 비활성화
+        gameScene.SetActive(false);
     }
     
     // 맵 선택 팝업 창 표시
     public void ShowSinglePannel()
     {
-        SinglePannel.SetActive(!SinglePannel.activeSelf);
+        singlePannel.SetActive(!singlePannel.activeSelf);
     }
 
     public void ShowMultiPannel()
@@ -65,6 +73,12 @@ public class LobbyManager : MonoBehaviour
         menuPannel.SetActive(!menuPannel.activeSelf);
     }
 
+    public void SwapScene()
+    {
+        gameScene.SetActive(!gameScene.activeSelf);
+        lobbyScene.SetActive(!gameScene.activeSelf);
+    }
+    
     public void Exit()
     {
         #if UNITY_EDITOR
