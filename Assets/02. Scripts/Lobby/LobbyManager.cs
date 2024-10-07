@@ -27,15 +27,6 @@ public class LobbyManager : MonoBehaviour
     // 매니저 스크립트 인스턴스 생성 시 실행
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
         // 초기 설정
         Initialize();
     }
