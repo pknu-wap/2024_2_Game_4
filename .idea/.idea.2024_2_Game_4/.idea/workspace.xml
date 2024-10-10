@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f34a6bc-fec4-4f5a-af88-a7965631226c" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/EJW/EJW.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/EJW/EJW.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +98,8 @@
       <workItem from="1728539982027" duration="1237000" />
       <workItem from="1728541236824" duration="13000" />
       <workItem from="1728541269437" duration="4249000" />
+      <workItem from="1728550732165" duration="2000" />
+      <workItem from="1728550771779" duration="312000" />
     </task>
     <servers />
   </component>

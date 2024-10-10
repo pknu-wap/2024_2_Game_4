@@ -34,7 +34,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else if (skillNumber == 3)
         {
-            StartCoroutine(DashSkill(3f));
+            //StartCoroutine(DashSkill(3f));
         }
     }
     
