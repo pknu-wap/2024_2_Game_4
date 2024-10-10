@@ -12,10 +12,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Platform
   - Enemy
-  - 
-  - 
+  - Player
+  - PlayerDamaged
   - 
   - 
   - 
