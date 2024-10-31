@@ -1046,9 +1046,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e7c976f448e40ff9086c3b6e25f922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3
-  jumpPower: 3
+  maxSpeed: 4
+  jumpPower: 4
   downPower: 3
+  skillNumber: 3
+  canMove: 1
 --- !u!50 &642906546
 Rigidbody2D:
   serializedVersion: 4
@@ -2537,9 +2539,9 @@ GameObject:
   - component: {fileID: 1746019681}
   - component: {fileID: 1746019680}
   - component: {fileID: 1746019679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LandForm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
