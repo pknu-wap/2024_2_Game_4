@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f34a6bc-fec4-4f5a-af88-a7965631226c" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/EJW/EJW.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/EJW/EJW.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/MergeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/MergeScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/PlayerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,22 +30,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/map",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;player/move&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/jiwon/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/jiwon/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/jiwon/Library/Application Support/Symbols/src&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\ETC\Unity Hub\2022.3.47f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.47f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\DeskTop\Desktop\2024_2_Game_4 -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\DeskTop\Desktop\2024_2_Game_4" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -47,7 +60,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\ETC\Unity Hub\2022.3.47f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.47f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\DeskTop\Desktop\2024_2_Game_4 -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\DeskTop\Desktop\2024_2_Game_4" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -94,6 +107,26 @@
       <workItem from="1728550732165" duration="2000" />
       <workItem from="1728550771779" duration="312000" />
       <workItem from="1730119485367" duration="527000" />
+      <workItem from="1730352366632" duration="13000" />
+      <workItem from="1730352390797" duration="820000" />
+      <workItem from="1730353221821" duration="450000" />
+      <workItem from="1730353797078" duration="2000" />
+      <workItem from="1730353806696" duration="630000" />
+      <workItem from="1730354512702" duration="33000" />
+      <workItem from="1730354677780" duration="7000" />
+      <workItem from="1730355198155" duration="41000" />
+      <workItem from="1730355446528" duration="874000" />
+      <workItem from="1730356552419" duration="18000" />
+      <workItem from="1730356587157" duration="130000" />
+      <workItem from="1730362112159" duration="248000" />
+      <workItem from="1730362403010" duration="430000" />
+      <workItem from="1730362846536" duration="4000" />
+      <workItem from="1730362857271" duration="7000" />
+      <workItem from="1730362971477" duration="159000" />
+      <workItem from="1730363219412" duration="223000" />
+      <workItem from="1730363468654" duration="20000" />
+      <workItem from="1730363594551" duration="2172000" />
+      <workItem from="1730365912195" duration="221000" />
     </task>
     <servers />
   </component>
@@ -108,7 +141,6 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
-    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

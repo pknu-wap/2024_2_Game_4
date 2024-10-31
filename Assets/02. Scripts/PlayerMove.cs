@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
@@ -13,13 +13,29 @@ public class NewBehaviourScript : MonoBehaviour
     public int skillNumber;
     public bool canMove = true;
     
-    
-    
+    // 버튼 조작 관련
+    public bool inputLeft = false;
+    public bool inputRight = false;
+    public bool inputJump = false;
+    public bool inputDown = false;
+    public bool inputSkill = false;
+
+    public void OnLeftButtonDown() => inputLeft = true;
+    public void OnLeftButtonUp() => inputLeft = false;
+    public void OnRightButtonDown() => inputRight = true;
+    public void OnRightButtonUp() => inputRight = false;
+    public void OnJumpButtonDown() => inputJump = true;
+    public void OnJumpButtonUp() => inputJump = false;
+    public void OnDownButtonDown() => inputDown = true;
+    public void OnDownButtonUp() => inputDown = false;
+    public void OnSkillButtonDown() => inputSkill = true;
+    public void OnSkillButtonUp() => inputSkill = false;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        StartCoroutine(PlayerMove());
+        StartCoroutine(PlayerMoving());
     }
 
     void PlayerSkill()
@@ -34,7 +50,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else if (skillNumber == 3)
         {
-            //StartCoroutine(DashSkill(3f));
+            StartCoroutine(DashSkill(1f));
         }
     }
     
@@ -60,17 +76,21 @@ public class NewBehaviourScript : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, 1);
         gameObject.layer = 8;
     }
-    /*IEnumerator DashSkill(float duration){
+    IEnumerator DashSkill(float duration){
         float startTime = Time.time; // 시작 시간 기록
-        int dirc = transform.position.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc,1)*2,ForceMode2D.Impulse);
+        int dirc = spriteRenderer.flipX ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc,0.5f)*10,ForceMode2D.Impulse);
+        gameObject.layer = 9;
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         while (Time.time < startTime + duration)
         {
             yield return null; // 한 프레임 대기
         }
-    }*/
+        spriteRenderer.color = new Color(1, 1, 1, 1);
+        gameObject.layer = 8;
+    }
 
-    IEnumerator PlayerMove()
+    IEnumerator PlayerMoving()
     {
         while (true)
         {
@@ -79,7 +99,12 @@ public class NewBehaviourScript : MonoBehaviour
             // 수평 이동 구현
             if (canMove)
             {
-                float h = Input.GetAxisRaw("Horizontal");
+                float h = 0;
+                h = Input.GetAxisRaw("Horizontal");
+                if (inputLeft)
+                    h = -1;
+                else if (inputRight)
+                    h = 1;
                 rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
 
                 if (rigid.velocity.x > maxSpeed) // 오른쪽 최대 속도 제한
@@ -93,19 +118,32 @@ public class NewBehaviourScript : MonoBehaviour
                 }
 
                 // 점프 구현
-                if (Input.GetKeyDown(KeyCode.UpArrow))
+                if (Input.GetKeyDown(KeyCode.UpArrow) || inputJump)
+                {
                     rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-                if (Input.GetKeyDown(KeyCode.DownArrow))
+                    OnJumpButtonUp();
+                }
+
+                if (Input.GetKeyDown(KeyCode.DownArrow) || inputDown)
+                {
                     rigid.AddForce(Vector2.down * downPower, ForceMode2D.Impulse);
+                    OnDownButtonUp();
+                }
             }
 
             // 스프라이트 방향 전환
             if (Input.GetButton("Horizontal"))
                 spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == 1; // 스프라이트의 기본이 왼쪽이면 1로 설정 오른쪽이면 -1
-
-            if (Input.GetKeyDown(KeyCode.X))
+            if (inputRight)
+                spriteRenderer.flipX = inputRight;
+            else if (inputLeft)
+                spriteRenderer.flipX = inputRight;
+                
+            // 스킬 사용
+            if (Input.GetKeyDown(KeyCode.X) || inputSkill)
             {
                 PlayerSkill();
+                OnSkillButtonUp();
             }
         }
     }
