@@ -22,11 +22,12 @@ public class LobbyManager : MonoBehaviour
     public GameObject lobbyScene;
     
     // 다른 스크립트에서 사용하기 위해 싱글톤 생성
-    public static LobbyManager instance = null;
+    public static LobbyManager instance;
     
     // 매니저 스크립트 인스턴스 생성 시 실행
     void Awake()
     {
+        LobbyManager.instance = this;
         // 초기 설정
         Initialize();
     }
@@ -47,6 +48,7 @@ public class LobbyManager : MonoBehaviour
     public void ShowSinglePannel()
     {
         singlePannel.SetActive(!singlePannel.activeSelf);
+        MultiPlayManager.instance.OnConnectedToMaster();
     }
 
     public void ShowMultiPannel()

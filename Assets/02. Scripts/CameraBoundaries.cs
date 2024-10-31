@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraBoundaries : MonoBehaviour
 {
+    public static CameraBoundaries instance; 
+    
     //플레이어 오브젝트
     public Transform player;
 
@@ -16,23 +18,39 @@ public class CameraBoundaries : MonoBehaviour
 
     void Start()
     {
+        CameraBoundaries.instance = this;
         //카메라의 반높이, 반너비 계산
         Camera cam = Camera.main;
         cameraHalfHeight = cam.orthographicSize;
         cameraHalfWidth = cameraHalfHeight * cam.aspect;
 
+        // <Legacy>
         //플레이어 크기 계산
-        if (player != null)
-        {
-            SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
-            playerHalfWidth = playerRenderer.bounds.extents.x;
-            playerHalfHeight = playerRenderer.bounds.extents.y;
-        }
+        // if (player != null)
+        // {
+        //     SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
+        //     playerHalfWidth = playerRenderer.bounds.extents.x;
+        //     playerHalfHeight = playerRenderer.bounds.extents.y;
+        // }
 
         //코루틴 시작
-        StartCoroutine(CheckPlayerBounds());
+        // StartCoroutine(CheckPlayerBounds());
     }
 
+    public void SetPlayer(Transform player)
+    {
+        this.player = player;
+        //플레이어 크기 계산
+        SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
+        playerHalfWidth = playerRenderer.bounds.extents.x;
+        playerHalfHeight = playerRenderer.bounds.extents.y;
+    }
+    
+    public void SetBoundaries()
+    {
+        StartCoroutine(CheckPlayerBounds());
+    }
+    
     IEnumerator CheckPlayerBounds()
     {
         while (true)

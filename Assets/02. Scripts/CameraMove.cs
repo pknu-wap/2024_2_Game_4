@@ -7,9 +7,25 @@ public class CameraMove : MonoBehaviour
     
     // 카메라 이동 속도
     public float moveSpeed = 1f;
+    
+    public static CameraMove instance;
+    
+    // <Legacy>
+    // void Start()
+    // {
+    //     StartCoroutine(MoveCameraRight());
+    // }
 
-    void Start()
+    void Awake()
     {
+        instance = this;
+    }
+    
+    public void StartMoveCamera()
+    {
+        Transform player = PlayerManager.instance.GetPlayerTransform();
+        CameraBoundaries.instance.SetPlayer(player);
+        CameraBoundaries.instance.SetBoundaries();
         StartCoroutine(MoveCameraRight());
     }
     
