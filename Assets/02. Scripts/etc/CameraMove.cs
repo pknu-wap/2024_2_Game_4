@@ -23,9 +23,7 @@ public class CameraMove : MonoBehaviour
     
     public void StartMoveCamera()
     {
-        Transform player = PlayerManager.instance.GetPlayerTransform();
-        CameraBoundaries.instance.SetPlayer(player);
-        CameraBoundaries.instance.SetBoundaries();
+        Transform player = PlayerMove.instance.transform;
         StartCoroutine(MoveCameraRight());
     }
     

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - GameScene
+  - Bullet
+  - ControlPad
+  - Players
+  - SinglePlayer
+  - MultiPlayer
   layers:
   - Default
   - TransparentFX

@@ -3,11 +3,11 @@ using System.Collections;
 
 public class CameraBoundaries : MonoBehaviour
 {
-    public static CameraBoundaries instance; 
     
     //플레이어 오브젝트
     public Transform player;
-
+    public Camera cam;
+    
     //카메라의 경계를 제한할 변수들
     private float cameraHalfWidth;
     private float cameraHalfHeight;
@@ -18,36 +18,19 @@ public class CameraBoundaries : MonoBehaviour
 
     void Start()
     {
-        CameraBoundaries.instance = this;
+        player = this.GetComponent<Transform>();
         //카메라의 반높이, 반너비 계산
-        Camera cam = Camera.main;
+        cam = Camera.main;
         cameraHalfHeight = cam.orthographicSize;
         cameraHalfWidth = cameraHalfHeight * cam.aspect;
-
-        // <Legacy>
-        //플레이어 크기 계산
-        // if (player != null)
-        // {
-        //     SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
-        //     playerHalfWidth = playerRenderer.bounds.extents.x;
-        //     playerHalfHeight = playerRenderer.bounds.extents.y;
-        // }
-
-        //코루틴 시작
-        // StartCoroutine(CheckPlayerBounds());
-    }
-
-    public void SetPlayer(Transform player)
-    {
-        this.player = player;
-        //플레이어 크기 계산
-        SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
-        playerHalfWidth = playerRenderer.bounds.extents.x;
-        playerHalfHeight = playerRenderer.bounds.extents.y;
-    }
-    
-    public void SetBoundaries()
-    {
+        
+         if (player != null)
+         {
+             SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
+             playerHalfWidth = playerRenderer.bounds.extents.x;
+             playerHalfHeight = playerRenderer.bounds.extents.y;
+         }
+         
         StartCoroutine(CheckPlayerBounds());
     }
     
@@ -56,12 +39,11 @@ public class CameraBoundaries : MonoBehaviour
         while (true)
         {
             //카메라의 현재 위치를 지속적으로 가져옴
-            Vector3 cameraPos = Camera.main.transform.position;
+            Vector3 cameraPos = cam.transform.position;
 
             //카메라 경계 계산 (플레이어 크기 고려)
             float minX = cameraPos.x - cameraHalfWidth + playerHalfWidth;
             float maxX = cameraPos.x + cameraHalfWidth - playerHalfWidth;
-
             //플레이어가 있을 때만 경계 체크
             if (player != null)
             {

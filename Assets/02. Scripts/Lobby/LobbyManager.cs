@@ -20,6 +20,9 @@ public class LobbyManager : MonoBehaviour
     
     [Header("로비 씬")]
     public GameObject lobbyScene;
+
+    [Header("컨트롤 패드")] 
+    public GameObject controlPad;
     
     // 다른 스크립트에서 사용하기 위해 싱글톤 생성
     public static LobbyManager instance;
@@ -28,6 +31,8 @@ public class LobbyManager : MonoBehaviour
     void Awake()
     {
         LobbyManager.instance = this;
+        // 컨트롤 패드 오브젝트 로드
+        controlPad = GameObject.FindWithTag("ControlPad");
         // 초기 설정
         Initialize();
     }
@@ -42,6 +47,7 @@ public class LobbyManager : MonoBehaviour
         rankPannel.SetActive(false);
         // 게임 씬 비활성화
         gameScene.SetActive(false);
+        controlPad.SetActive(false);
     }
     
     // 맵 선택 팝업 창 표시
@@ -68,6 +74,7 @@ public class LobbyManager : MonoBehaviour
 
     public void SwapScene()
     {
+        controlPad.SetActive(!gameScene.activeSelf);
         gameScene.SetActive(!gameScene.activeSelf);
         lobbyScene.SetActive(!gameScene.activeSelf);
     }

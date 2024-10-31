@@ -29,7 +29,6 @@ public class MultiPlayManager : MonoBehaviourPunCallbacks
         Screen.SetResolution(1080,1920,false);
         PhotonNetwork.ConnectUsingSettings();
     }
-
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinLobby();
@@ -46,9 +45,15 @@ public class MultiPlayManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        GameObject player = PhotonNetwork.Instantiate("Player", startPosition, Quaternion.identity, 0);
-        player.transform.SetParent(gameSceneTransform, false);
-        CameraMove.instance.StartMoveCamera();
+        PlayerInitialize();
     }
 
+    void PlayerInitialize()
+    {
+        GameObject player = PhotonNetwork.Instantiate("Player", startPosition, Quaternion.identity, 0);
+        player.tag = "MultiPlayer";
+        player.transform.SetParent(gameSceneTransform, false);
+        CameraMove.instance.StartMoveCamera();
+        
+    }
 }

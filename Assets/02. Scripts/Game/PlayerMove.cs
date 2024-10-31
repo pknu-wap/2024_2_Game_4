@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public static PlayerMove instance;
+    
     Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
     public float maxSpeed;
@@ -33,6 +35,7 @@ public class PlayerMove : MonoBehaviour
 
     void Awake()
     {
+        PlayerMove.instance = this;
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(PlayerMoving());
@@ -174,7 +177,10 @@ public class PlayerMove : MonoBehaviour
         canMove = true;
     }
 
-
+    public GameObject GetPlayerObject()
+    {
+        return this.gameObject;
+    }
 
 
     void Update()

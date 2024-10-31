@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ButtonControl : MonoBehaviour
 {
-    GameObject Player;
+    public GameObject Player;
     PlayerMove playerMove;
     void Start()
     {
-        Player = GameObject.Find("Player");
+        Player = GameObject.FindGameObjectWithTag("Player");
         playerMove = Player.GetComponent<PlayerMove>();
     }
     
