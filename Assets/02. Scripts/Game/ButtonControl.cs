@@ -4,56 +4,56 @@ using UnityEngine;
 
 public class ButtonControl : MonoBehaviour
 {
-    public GameObject Player;
-    PlayerMove playerMove;
-    void Start()
-    {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        playerMove = Player.GetComponent<PlayerMove>();
-    }
+    // public GameObject Player;
+    // PlayerMove playerMove;
+    // void Start()
+    // {
+    //     Player = this.gameObject;
+    //     playerMove = Player.GetComponent<PlayerMove>();
+    // }
     
     public void LeftDown()
     {
-        playerMove.OnLeftButtonDown();
+        PlayerMove.instance.OnLeftButtonDown();
     }
     public void LeftUp()
     {
-        playerMove.OnLeftButtonUp();
+        PlayerMove.instance.OnLeftButtonUp();
     }
     public void RightDown()
     {
-        playerMove.OnRightButtonDown();
+        PlayerMove.instance.OnRightButtonDown();
     }
     public void RightUp()
     {
-        playerMove.OnRightButtonUp();
+        PlayerMove.instance.OnRightButtonUp();
     }
     public void JumpDown()
     {
-        playerMove.OnJumpButtonDown();
+        PlayerMove.instance.OnJumpButtonDown();
     }
     public void JumpUp()
     {
-        playerMove.OnJumpButtonUp();
+        PlayerMove.instance.OnJumpButtonUp();
     }
     public void DownDown()
     {
-        playerMove.OnDownButtonDown();
+        PlayerMove.instance.OnDownButtonDown();
     }
 
     public void DownUp()
     {
-        playerMove.OnDownButtonUp();
+        PlayerMove.instance.OnDownButtonUp();
     }
 
     public void SkillDown()
     {
-        playerMove.OnSkillButtonDown();
+        PlayerMove.instance.OnSkillButtonDown();
     }
 
     public void SkillUp()
     {
-        playerMove.OnSkillButtonUp();
+        PlayerMove.instance.OnSkillButtonUp();
     }
     
     

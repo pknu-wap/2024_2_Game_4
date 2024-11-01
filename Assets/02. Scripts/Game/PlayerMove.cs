@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     public float jumpPower;
     public float downPower;
     public int skillNumber;
+    [SerializeField]
     public bool canMove = true;
     
     // 버튼 조작 관련

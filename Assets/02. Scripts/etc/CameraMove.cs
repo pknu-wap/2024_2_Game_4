@@ -18,7 +18,7 @@ public class CameraMove : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
+        CameraMove.instance = this;
     }
     
     public void StartMoveCamera()

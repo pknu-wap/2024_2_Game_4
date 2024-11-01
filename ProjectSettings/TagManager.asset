@@ -9,8 +9,7 @@ TagManager:
   - Bullet
   - ControlPad
   - Players
-  - SinglePlayer
-  - MultiPlayer
+  - Counter
   layers:
   - Default
   - TransparentFX

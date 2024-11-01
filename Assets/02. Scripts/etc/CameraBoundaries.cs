@@ -36,6 +36,7 @@ public class CameraBoundaries : MonoBehaviour
     
     IEnumerator CheckPlayerBounds()
     {
+        player.position = new Vector3(cameraHalfWidth, 0, 0);
         while (true)
         {
             //카메라의 현재 위치를 지속적으로 가져옴
