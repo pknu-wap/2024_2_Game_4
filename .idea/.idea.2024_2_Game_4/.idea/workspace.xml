@@ -7,13 +7,10 @@
     <list default="true" id="3f34a6bc-fec4-4f5a-af88-a7965631226c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/CDG/MergeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/CDG/MergeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/Game/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/Game/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/etc/CountManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/etc/CountManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/etc/MultiPlayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/etc/MultiPlayManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +115,7 @@
       <workItem from="1730429484557" duration="684000" />
       <workItem from="1730430231446" duration="1632000" />
       <workItem from="1730433720949" duration="3794000" />
+      <workItem from="1730451413054" duration="120000" />
     </task>
     <servers />
   </component>
