@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : MonoBehaviourPunCallbacks
 {
     public static PlayerMove instance;
     
@@ -15,6 +16,8 @@ public class PlayerMove : MonoBehaviour
     public int skillNumber;
     [SerializeField]
     public bool canMove = true;
+    
+    private PhotonView pView;
     
     // 버튼 조작 관련
     public bool inputLeft = false;
@@ -38,10 +41,15 @@ public class PlayerMove : MonoBehaviour
     {
         PlayerMove.instance = this;
         rigid = GetComponent<Rigidbody2D>();
+        pView = GetComponent<PhotonView>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        StartCoroutine(PlayerMoving());
     }
 
+    public void Moving()
+    {
+        StartCoroutine(PlayerMoving());
+    }
+    
     void PlayerSkill()
     {
         if (skillNumber == 1)
@@ -99,7 +107,7 @@ public class PlayerMove : MonoBehaviour
         while (true)
         {
             yield return null; // 즉시 실행
-
+            Debug.Log("플레이어 입력 대기중");
             // 수평 이동 구현
             if (canMove)
             {

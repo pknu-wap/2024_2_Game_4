@@ -53,9 +53,9 @@ public class MultiPlayManager : MonoBehaviourPunCallbacks
     IEnumerator PlayerInitialize()
     {
         GameObject player = PhotonNetwork.Instantiate("Player", startPosition, Quaternion.identity, 0);
-        player.tag = "Player";
         player.transform.SetParent(gameSceneTransform, false);
         LobbyManager.instance.SwapScene();
+        PlayerMove.instance.Moving();
         while (PhotonNetwork.CurrentRoom.PlayerCount != roomOptions.MaxPlayers)
         {
             yield return null;

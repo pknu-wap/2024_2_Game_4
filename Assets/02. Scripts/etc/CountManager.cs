@@ -16,6 +16,7 @@ public class CountManager : MonoBehaviour
 
     public void GameStart()
     {
+        PlayerMove.instance.Moving();
         StartCoroutine(StartCounting());
     }
     
