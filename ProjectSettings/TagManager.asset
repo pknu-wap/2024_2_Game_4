@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - GameScene
+  - Bullet
+  - ControlPad
+  - Players
+  - Counter
   layers:
   - Default
   - TransparentFX
