@@ -164,25 +164,43 @@ public class PlayerMove : MonoBehaviourPunCallbacks
         // 장애물과 충돌
         if (collision.gameObject.tag == "Enemy")
         {
-            OnDamaged(collision.transform.position);
+            OnDamaged(collision.transform.position,0);
+        }
+
+        if (collision.gameObject.tag == "EndEnemy")
+        {
+            OnDamaged(collision.transform.position,1);
         }
     }
 
-    void OnDamaged(Vector2 targetPos)
+    void OnDamaged(Vector2 targetPos,int type)
     {
         canMove = false;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
-
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc,1)*2,ForceMode2D.Impulse);
-        Invoke("OffDamaged", 0.5f);
-      
-
+        if (type == 0)
+        {
+            rigid.AddForce(new Vector2(dirc, 1) * 2, ForceMode2D.Impulse);
+            Invoke("OffDamaged", 0.5f);
+        }
+        else if (type == 1)
+        {
+            rigid.AddForce(new Vector2(dirc, 1) * 5, ForceMode2D.Impulse);
+            gameObject.layer = 9;
+            Invoke("CanMoveStart",0.5f);
+            Invoke("OffDamaged", 1.0f);
+        }
     }
 
     void OffDamaged()
     {
         spriteRenderer.color = new Color(1, 1, 1, 1);
+        gameObject.layer = 8;
+        canMove = true;
+    }
+
+    void CanMoveStart()
+    {
         canMove = true;
     }
 
