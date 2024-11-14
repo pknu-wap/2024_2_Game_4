@@ -92,6 +92,7 @@ public class LobbyManager : MonoBehaviour
         singlePlayer.SetActive(true);
         SwapScene();
         CountManager.instance.GameStart();
+        TimeLimiter.instance.StartTimer();
     }
     
     //로비 종료 함수

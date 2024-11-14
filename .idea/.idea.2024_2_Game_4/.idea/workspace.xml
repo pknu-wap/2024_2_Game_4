@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3f34a6bc-fec4-4f5a-af88-a7965631226c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/CDG/MergeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/CDG/MergeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/Hc/MergeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/Hc/MergeScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/Lobby/LobbyManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +33,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/multiPlay&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/map&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -117,6 +113,12 @@
       <workItem from="1730430231446" duration="1632000" />
       <workItem from="1730433720949" duration="3794000" />
       <workItem from="1730451413054" duration="120000" />
+      <workItem from="1731380196748" duration="195000" />
+      <workItem from="1731380829876" duration="36000" />
+      <workItem from="1731380867253" duration="3654000" />
+      <workItem from="1731384565830" duration="25000" />
+      <workItem from="1731384644120" duration="13000" />
+      <workItem from="1731385980750" duration="574000" />
     </task>
     <servers />
   </component>
