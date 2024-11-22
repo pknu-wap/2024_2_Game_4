@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3f34a6bc-fec4-4f5a-af88-a7965631226c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/Hc/MergeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/Hc/MergeScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/Lobby/LobbyManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,6 +118,8 @@
       <workItem from="1731384565830" duration="25000" />
       <workItem from="1731384644120" duration="13000" />
       <workItem from="1731385980750" duration="574000" />
+      <workItem from="1732251793181" duration="107000" />
+      <workItem from="1732251936726" duration="10000" />
     </task>
     <servers />
   </component>
@@ -128,7 +129,6 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
-    <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>
