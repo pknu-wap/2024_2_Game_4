@@ -10,6 +10,7 @@ TagManager:
   - ControlPad
   - Players
   - Counter
+  - EndEnemy
   layers:
   - Default
   - TransparentFX
