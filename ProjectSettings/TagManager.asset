@@ -11,6 +11,7 @@ TagManager:
   - Players
   - Counter
   - EndEnemy
+  - Item
   layers:
   - Default
   - TransparentFX

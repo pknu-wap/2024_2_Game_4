@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerMove : MonoBehaviourPunCallbacks
 {
     public static PlayerMove instance;
@@ -18,6 +19,8 @@ public class PlayerMove : MonoBehaviourPunCallbacks
     public bool canMove = true;
     
     private PhotonView pView;
+    
+    
     
     // 버튼 조작 관련
     public bool inputLeft = false;
@@ -107,7 +110,7 @@ public class PlayerMove : MonoBehaviourPunCallbacks
         while (true)
         {
             yield return null; // 즉시 실행
-            Debug.Log("플레이어 입력 대기중");
+            //Debug.Log("플레이어 입력 대기중");
             // 수평 이동 구현
             if (canMove)
             {
@@ -124,10 +127,10 @@ public class PlayerMove : MonoBehaviourPunCallbacks
                 else if (rigid.velocity.x < maxSpeed * (-1)) // 왼쪽 최대 속도 제한
                     rigid.velocity = new Vector2(maxSpeed * (-1), rigid.velocity.y);
 
-                if (Input.GetButtonUp("Horizontal")) // 키보드 입력 해제시 속도 줄이기
+                /*if (Input.GetButtonUp("Horizontal")) // 키보드 입력 해제시 속도 줄이기
                 {
                     rigid.velocity = new Vector2(0.5f * rigid.velocity.normalized.x, rigid.velocity.y);
-                }
+                }*/
 
                 // 점프 구현
                 if (Input.GetKeyDown(KeyCode.UpArrow) || inputJump)
@@ -147,9 +150,9 @@ public class PlayerMove : MonoBehaviourPunCallbacks
             if (Input.GetButton("Horizontal"))
                 spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == 1; // 스프라이트의 기본이 왼쪽이면 1로 설정 오른쪽이면 -1
             if (inputRight)
-                spriteRenderer.flipX = inputRight;
+                spriteRenderer.flipX = inputLeft;
             else if (inputLeft)
-                spriteRenderer.flipX = inputRight;
+                spriteRenderer.flipX = inputLeft;
                 
             // 스킬 사용
             if (Input.GetKeyDown(KeyCode.X) || inputSkill)
@@ -159,6 +162,27 @@ public class PlayerMove : MonoBehaviourPunCallbacks
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Item")
+        {
+            //점수
+            Debug.Log(collision.gameObject.name);
+            bool isBronze = collision.gameObject.name.Contains("coinBronze");
+            bool isSilver = collision.gameObject.name.Contains("coinSilver");
+            bool isGold = collision.gameObject.name.Contains("coinGold");
+            collision.gameObject.SetActive(false);
+            if (isBronze)
+                PlayerValue.instance.GetScore(50);
+            else if (isSilver)
+                PlayerValue.instance.GetScore(150);
+            else if (isGold)
+                PlayerValue.instance.GetScore(300);
+        }
+        
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         // 장애물과 충돌
@@ -176,6 +200,7 @@ public class PlayerMove : MonoBehaviourPunCallbacks
     void OnDamaged(Vector2 targetPos,int type)
     {
         canMove = false;
+        PlayerValue.instance.HpDamage(5);
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         if (type == 0)
@@ -198,6 +223,7 @@ public class PlayerMove : MonoBehaviourPunCallbacks
         gameObject.layer = 8;
         canMove = true;
     }
+    
 
     void CanMoveStart()
     {
