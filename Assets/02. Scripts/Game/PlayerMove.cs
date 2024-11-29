@@ -190,8 +190,18 @@ public class PlayerMove : MonoBehaviourPunCallbacks
         // 장애물과 충돌
         if (collision.gameObject.tag == "Enemy")
         {
-            OnDamaged(collision.transform.position,0);
+            Vector3 hitPosition = Vector3.zero;
+        
+            // Tilemap 콜라이더의 정확한 충돌 지점을 가져옴
+            foreach (ContactPoint2D hit in collision.contacts)
+            {
+                hitPosition = hit.point; // 충돌한 지점의 월드 좌표
+                break; // 첫 번째 충돌 지점만 사용
+            }
+            
+            OnDamaged(hitPosition,0);
         }
+        
 
         if (collision.gameObject.tag == "EndEnemy")
         {
@@ -201,22 +211,22 @@ public class PlayerMove : MonoBehaviourPunCallbacks
 
     void OnDamaged(Vector2 targetPos,int type)
     {
+        Debug.Log($"Player Position: {transform.position}, Collision Position: {targetPos}");
         canMove = false;
-        PlayerValue.instance.HpDamage(5);
-        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
+        rigid.velocity = Vector3.zero;
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f); // 색상 변경, 피격 표시
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         if (type == 0)
         {
+            PlayerValue.instance.HpDamage(5);
             rigid.AddForce(new Vector2(dirc, 1) * 2, ForceMode2D.Impulse);
-            Invoke("OffDamaged", 0.5f);
+            Invoke("OffDamaged", 0.7f);
         }
         else if (type == 1)
         {
-            rigid.AddForce(new Vector2(dirc, 1) * 5, ForceMode2D.Impulse);
-            gameObject.layer = 9;
-            Invoke("CanMoveStart",0.5f);
-            Invoke("OffDamaged", 1.0f);
+            PlayerValue.instance.HpDamage(100);
         }
+
     }
 
     void OffDamaged()
@@ -241,7 +251,6 @@ public class PlayerMove : MonoBehaviourPunCallbacks
     {
         return this.gameObject;
     }
-
 
     void Update()
     {

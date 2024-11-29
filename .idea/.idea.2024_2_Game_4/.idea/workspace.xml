@@ -9,15 +9,6 @@
       <change afterPath="$PROJECT_DIR$/Assets/02. Scripts/etc/MapManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/CDG/MergeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/CDG/MergeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/Game/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/Game/PlayerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/Game/PlayerValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/Game/PlayerValue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/Lobby/LobbyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/etc/CameraBoundaries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/etc/CameraBoundaries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/etc/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/etc/CameraMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/etc/CountManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/etc/CountManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,8 +128,6 @@
       <workItem from="1732775003240" duration="507000" />
       <workItem from="1732775817546" duration="36000" />
       <workItem from="1732776404094" duration="161000" />
-      <workItem from="1732776675055" duration="2013000" />
-      <workItem from="1732812272045" duration="9199000" />
     </task>
     <servers />
   </component>
