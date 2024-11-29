@@ -36,6 +36,7 @@ public class CountManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             cnt--;
         }    
-        cntText.text = "Start!";
+        cntText.text = "GO!";
+        yield return new WaitForSeconds(1f);
     }
 }

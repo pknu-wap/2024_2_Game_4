@@ -17,6 +17,8 @@ public class PlayerMove : MonoBehaviourPunCallbacks
     public int skillNumber;
     [SerializeField]
     public bool canMove = true;
+
+    private bool masterCanMove = true;
     
     private PhotonView pView;
     
@@ -107,7 +109,7 @@ public class PlayerMove : MonoBehaviourPunCallbacks
 
     IEnumerator PlayerMoving()
     {
-        while (true)
+        while (masterCanMove)
         {
             yield return null; // 즉시 실행
             //Debug.Log("플레이어 입력 대기중");
@@ -147,12 +149,12 @@ public class PlayerMove : MonoBehaviourPunCallbacks
             }
 
             // 스프라이트 방향 전환
-            if (Input.GetButton("Horizontal"))
-                spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == 1; // 스프라이트의 기본이 왼쪽이면 1로 설정 오른쪽이면 -1
-            if (inputRight)
-                spriteRenderer.flipX = inputLeft;
-            else if (inputLeft)
-                spriteRenderer.flipX = inputLeft;
+            //if (Input.GetButton("Horizontal"))
+            //    spriteRenderer.flipX = spriteRenderer.flipX; // 스프라이트의 기본이 왼쪽이면 1로 설정 오른쪽이면 -1
+            if (inputRight || Input.GetKeyDown(KeyCode.RightArrow))
+                spriteRenderer.flipX = true;
+            else if (inputLeft || Input.GetKeyDown(KeyCode.LeftArrow))
+                spriteRenderer.flipX = false;
                 
             // 스킬 사용
             if (Input.GetKeyDown(KeyCode.X) || inputSkill)
@@ -230,6 +232,11 @@ public class PlayerMove : MonoBehaviourPunCallbacks
         canMove = true;
     }
 
+    public void StopMove()
+    {
+        masterCanMove = false;
+    }
+    
     public GameObject GetPlayerObject()
     {
         return this.gameObject;
