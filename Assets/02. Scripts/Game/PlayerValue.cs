@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerValue : MonoBehaviour
 {
     // Start is called before the first frame update
     
     public static PlayerValue instance;
+    public TextMeshProUGUI endScore;
     
     // 점수 관련
     public int totalPoint = 0;
@@ -53,6 +55,7 @@ public class PlayerValue : MonoBehaviour
         {
             CameraMove.instance.stopMove();
             PlayerMove.instance.StopMove();
+            endScore.text = "Score: " + totalPoint.ToString();
             LobbyManager.instance.ShowReloadButton();
         }
     }
