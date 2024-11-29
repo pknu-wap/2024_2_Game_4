@@ -4528,8 +4528,8 @@ Canvas:
   m_GameObject: {fileID: 419644494}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1655164423}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4540,7 +4540,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &419644498
 RectTransform:
@@ -4559,7 +4559,7 @@ RectTransform:
   - {fileID: 1626601008}
   - {fileID: 1942024259}
   - {fileID: 540142849}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 955323453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7901,6 +7901,7 @@ Transform:
   - {fileID: 1655164421}
   - {fileID: 2052691062}
   - {fileID: 2056091952}
+  - {fileID: 419644498}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &982094364
@@ -12869,5 +12870,4 @@ SceneRoots:
   - {fileID: 380927388}
   - {fileID: 955323453}
   - {fileID: 1285818136}
-  - {fileID: 419644498}
   - {fileID: 195646420}

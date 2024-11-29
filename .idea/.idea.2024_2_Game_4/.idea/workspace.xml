@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f34a6bc-fec4-4f5a-af88-a7965631226c" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/02. Scripts/etc/MapManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/02. Scripts/etc/MapManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2024_2_Game_4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/EJW/MergeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/EJW/MergeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01. Scenes/Hc/New Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01. Scenes/Hc/New Palette.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02. Scripts/Game/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02. Scripts/Game/PlayerMove.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,39 +20,36 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/02. Scripts/Game/GameSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/02. Scripts/etc/MapManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2n6jmzbk0mW5gwcVD4cQb9nr0xV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;player/move&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/jiwon/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/jiwon/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/jiwon/Library/Application Support/Symbols/src&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/multiPlay",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.47f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\DeskTop\Desktop\2024_2_Game_4 -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\DeskTop\Desktop\2024_2_Game_4" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -60,7 +57,7 @@
       <method v="2" />
     </configuration>
     <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Unity Build\2024_2_Game_4.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Downloads/새 폴더\2024_2_Game_4.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\PC\Downloads" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -68,7 +65,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.47f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.47f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\DeskTop\Desktop\2024_2_Game_4 -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\DeskTop\Desktop\2024_2_Game_4" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -131,14 +128,6 @@
       <workItem from="1732775003240" duration="507000" />
       <workItem from="1732775817546" duration="36000" />
       <workItem from="1732776404094" duration="161000" />
-      <workItem from="1732776675055" duration="2614000" />
-      <workItem from="1732840293235" duration="1054000" />
-      <workItem from="1732842022804" duration="16000" />
-      <workItem from="1732848985734" duration="473000" />
-      <workItem from="1732855370160" duration="2495000" />
-      <workItem from="1732857926873" duration="14000" />
-      <workItem from="1732861365391" duration="77000" />
-      <workItem from="1732861451143" duration="3000" />
     </task>
     <servers />
   </component>

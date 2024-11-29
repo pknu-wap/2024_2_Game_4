@@ -51,6 +51,9 @@ public class PlayerValue : MonoBehaviour
         CheckHp();
         if (curHealth <= 0)
         {
+            CameraMove.instance.stopMove();
+            PlayerMove.instance.StopMove();
+            LobbyManager.instance.ShowReloadButton();
         }
     }
 
