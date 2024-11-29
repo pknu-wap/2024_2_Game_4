@@ -5599,12 +5599,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   singlePannel: {fileID: 197786752}
   multiPannel: {fileID: 1864582470}
-  menuPannel: {fileID: 1920301737}
-  rankPannel: {fileID: 922246157}
   gameScene: {fileID: 955323452}
   lobbyScene: {fileID: 380927387}
   controlPad: {fileID: 419644494}
   singlePlayer: {fileID: 2052691061}
+  selectedMap: {fileID: 0}
+  reloadButton: {fileID: 0}
 --- !u!1 &406260952
 GameObject:
   m_ObjectHideFlags: 0
@@ -14383,9 +14383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743a4a0449aae4636a0a71b054e946f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveSpeed: 1
-  waveStrength: 0.05
-  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1417899257
 GameObject:
   m_ObjectHideFlags: 0
@@ -14979,8 +14976,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 749.06, y: 440.18}
-  m_SizeDelta: {x: 361.88, y: 93.679}
+  m_AnchoredPosition: {x: 698.33, y: 442.06}
+  m_SizeDelta: {x: 463.34, y: 89.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1463020915
 MonoBehaviour:
@@ -15841,6 +15838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  canMove: 1
+  defaultPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1660646797
 GameObject:
   m_ObjectHideFlags: 0
@@ -17592,9 +17591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743a4a0449aae4636a0a71b054e946f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveSpeed: 1
-  waveStrength: 0.05
-  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1913525796
 GameObject:
   m_ObjectHideFlags: 0
@@ -18851,9 +18847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743a4a0449aae4636a0a71b054e946f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveSpeed: 1
-  waveStrength: 0.05
-  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2011490583
 GameObject:
   m_ObjectHideFlags: 0
@@ -19564,9 +19557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743a4a0449aae4636a0a71b054e946f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveSpeed: 1
-  waveStrength: 0.05
-  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2056091951
 GameObject:
   m_ObjectHideFlags: 0
